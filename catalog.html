@@ -13,7 +13,7 @@
           <img src="img/techomart_logo.svg" width="110" height="20" alt="Логотип интернет-магазина Техномарт">
         </a>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <input type="search" name="search" placeholder="Поиск:">
+          <input type="text" name="search" placeholder="Поиск:">
           <button type="submit">
             <span class="visually-hidden">Искать</span>
           </button>
@@ -64,9 +64,26 @@
       <h1>Перфораторы</h1>
 
       <section>
-        <h2 class="visually-hidden">Фильтр</h2>
+        <h2>Фильтр</h2>
         <form action="https://echo.htmlacademy.ru" method="get">
-          <!-- Раздел Цена будет добавлен здесь -->
+          <fieldset>
+            <legend>Цена:</legend>
+            <div>
+              <span class="visually-hidden">Шкала цен с двумя ползунками</span>
+              <div>
+                <span></span>
+              </div>
+              <div tabindex="0"><span class="visually-hidden">Ползунок минимума</span></div>
+              <div tabindex="0"><span class="visually-hidden">Ползунок максимума</span></div>
+            </div>
+            <div>
+              <label class="visually-hidden" for="price_lower">Нижняя цена</label>
+              <input type="text" id="price_lower" name="price_lower" value="0">
+              <span>—</span>
+              <label class="visually-hidden" for="price_upper">Верхняя цена</label>
+              <input type="text" id="price_upper" name="price_upper" value="30000">
+            </div>
+          </fieldset>
           <fieldset>
             <legend>Производители:</legend>
             <ul>
@@ -75,7 +92,7 @@
                 <label for="filter-bosch">Bosch</label>
               </li>
               <li>
-                <input id="filter-interskol" class="visually-hidden" type="checkbox" name="Интерскол">
+                <input id="filter-interskol" class="visually-hidden" type="checkbox" name="Interskol">
                 <label for="filter-interskol">Интерскол</label>
               </li>
               <li>
