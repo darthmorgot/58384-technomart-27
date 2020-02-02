@@ -12,7 +12,12 @@
         <a>
           <img src="img/techomart_logo.svg" width="110" height="20" alt="Логотип интернет-магазина Техномарт">
         </a>
-        <!-- Форма поиска будет добавлена здесь -->
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <input type="search" name="search" placeholder="Поиск:">
+          <button type="submit">
+            <span class="visually-hidden">Искать</span>
+          </button>
+        </form>
         <div>
           <a href="#">Закладки: <span>0</span></a>
           <a href="#">Корзина: <span>0</span></a>
@@ -234,9 +239,9 @@
       <div>
         <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
         <ul>
-          <li><a href="#">Вконтакте</a></li>
-          <li><a href="#">фейсбук</a></li>
-          <li><a href="#">Инстаграм</a></li>
+          <li><a href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+          <li><a href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a href="#"><span class="visually-hidden">Инстаграм</span></a></li>
         </ul>
         <p>
           Обратная связь:
@@ -248,6 +253,45 @@
         </p>
       </div>
     </footer>
+
+    <section>
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div>
+          <label for="name">Ваше имя:</label>
+          <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+          <label for="mail">Ваш e-mail:</label>
+          <input type="email" id="mail" name="email" placeholder="email@example.com">
+        </div>
+        <div>
+          <label for="message">Текст письма:</label>
+          <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
+
+    <section>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <img src="img/map_big.png" width="940" height="446" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+      <button type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
+
+    <section>
+      <h2>Товар добавлен в корзину!</h2>
+      <div>
+        <a href="#">Оформить заказ</a>
+        <button type="button">Продолжить покупки</button>
+      </div>
+      <button type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
 
     <script src="js/script.js"></script>
   </body>

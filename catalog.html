@@ -12,10 +12,17 @@
         <a href="index.html">
           <img src="img/techomart_logo.svg" width="110" height="20" alt="Логотип интернет-магазина Техномарт">
         </a>
-        <!-- Форма поиска будет добавлена здесь -->
-        <a href="#">Закладки: <span>0</span></a>
-        <a href="#">Корзина: <span>10</span></a>
-        <a href="#">Оформить заказ</a>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <input type="search" name="search" placeholder="Поиск:">
+          <button type="submit">
+            <span class="visually-hidden">Искать</span>
+          </button>
+        </form>
+        <div>
+          <a href="#">Закладки: <span>0</span></a>
+          <a href="#">Корзина: <span>10</span></a>
+          <a href="#">Оформить заказ</a>
+        </div>
       </div>
       <div>
         <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -26,7 +33,7 @@
         <div>
           <ul>
             <li><a href="#">Равшан Джамшутович</a></li>
-            <li><a href="#">Выйти</a></li>
+            <li><a href="#"><span class="visually-hidden">Выйти</span></a></li>
           </ul>
           <ul>
             <li><a href="#">Мои заказы</a></li>
@@ -49,7 +56,7 @@
 
     <main>
       <ul>
-        <li><a href="index.html">Главная</a></li>
+        <li><a href="index.html"><span class="visually-hidden">Главная</span></a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li>Перфораторы</li>
@@ -57,12 +64,53 @@
       <h1>Перфораторы</h1>
 
       <section>
-        <h2>Фильтр</h2>
-        <!-- Форма фильтра будет добавлена здесь -->
+        <h2 class="visually-hidden">Фильтр</h2>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <!-- Раздел Цена будет добавлен здесь -->
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul>
+              <li>
+                <input id="filter-bosch" class="visually-hidden" type="checkbox" name="Bosch" checked>
+                <label for="filter-bosch">Bosch</label>
+              </li>
+              <li>
+                <input id="filter-interskol" class="visually-hidden" type="checkbox" name="Интерскол">
+                <label for="filter-interskol">Интерскол</label>
+              </li>
+              <li>
+                <input id="filter-makita" class="visually-hidden" type="checkbox" name="Makita" checked>
+                <label for="filter-makita">Makita</label>
+              </li>
+              <li>
+                <input id="filter-dewalt" class="visually-hidden" type="checkbox" name="Dewalt">
+                <label for="filter-dewalt">Dewalt</label>
+              </li>
+              <li>
+                <input id="filter-hitachi" class="visually-hidden" type="checkbox" name="Hitachi">
+                <label for="filter-hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <ul>
+              <li>
+                <input id="filter-battery" class="visually-hidden" type="radio" name="power" value="battery" checked>
+                <label for="filter-battery">Аккумуляторные</label>
+              </li>
+              <li>
+                <input id="filter-electronetwork" class="visually-hidden" type="radio" name="power" value="electronetwork">
+                <label for="filter-electronetwork">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
 
       <section>
-        <h2>Список товаров</h2>
+        <h2 class="visually-hidden">Список товаров</h2>
         <div>
           <h3>Сортировка:</h3>
           <ul>
@@ -71,8 +119,8 @@
             <li><a href="#">По функционалу</a></li>
           </ul>
           <div>
-            <button type="button">По возрастанию</button>
-            <button type="button">По убыванию</button>
+            <button type="button"><span class="visually-hidden">По возрастанию</span></button>
+            <button type="button"><span class="visually-hidden">По убыванию</span></button>
           </div>
         </div>
         <ul>
@@ -206,9 +254,9 @@
       <div>
         <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
         <ul>
-          <li><a href="#">Вконтакте</a></li>
-          <li><a href="#">фейсбук</a></li>
-          <li><a href="#">Инстаграм</a></li>
+          <li><a href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+          <li><a href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a href="#"><span class="visually-hidden">Инстаграм</span></a></li>
         </ul>
         <p>
           Обратная связь:
@@ -220,6 +268,17 @@
         </p>
       </div>
     </footer>
+
+    <section>
+      <h2>Товар добавлен в корзину!</h2>
+      <div>
+        <a href="#">Оформить заказ</a>
+        <button type="button">Продолжить покупки</button>
+      </div>
+      <button type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
 
     <script src="js/script.js"></script>
   </body>
