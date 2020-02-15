@@ -9,35 +9,37 @@
   <body>
     <header class="header">
       <div class="header__top header-top">
-        <a class="logo">
-          <img src="img/techomart_logo.svg" width="110" height="20" alt="Логотип интернет-магазина Техномарт">
-        </a>
-        <form class="header__form form-search" action="https://echo.htmlacademy.ru" method="post">
-          <input class="form-search__input" type="text" name="search" placeholder="Поиск:">
-          <button class="form-search__btn"  type="submit">
-            <span class="visually-hidden">Искать</span>
-          </button>
-        </form>
-        <div class="header-top__menu">
-          <a class="header-top__link header-top__link--bookmark" href="#">Закладки: <span>0</span></a>
-          <a class="header-top__link header-top__link--cart" href="#">Корзина: <span>0</span></a>
-          <a class="header-top__link header-top__link--order" href="#">Оформить заказ</a>
+        <div class="header-top__wrapper container">
+          <a class="logo">
+            <img src="img/techomart_logo.svg" width="110" height="20" alt="Логотип интернет-магазина Техномарт">
+          </a>
+          <form class="header-top__form form-search" action="https://echo.htmlacademy.ru" method="post">
+            <input class="form-search__input" type="text" name="search" placeholder="Поиск:">
+            <button class="form-search__btn"  type="submit">
+              <span class="visually-hidden">Искать</span>
+            </button>
+          </form>
+          <div class="header-top__menu">
+            <a class="header-top__link header-top__link--bookmark" href="#">Закладки: <span>0</span></a>
+            <a class="header-top__link header-top__link--cart" href="#">Корзина: <span>0</span></a>
+            <a class="header-top__link header-top__link--order" href="#">Оформить заказ</a>
+          </div>
         </div>
       </div>
-      <div class="header__main header-main">
-        <p class="header-main__desc">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <div class="header__main header-main container">
+        <p class="header-main__desc">Интернет-магазин строительных материалов<br> и инструментов для ремонта</p>
         <div class="header-main__contacts">
           <a class="header-main__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <address class="header-main__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <div class="header-main__user">
           <ul class="header-main__auth auth-list">
-            <li class="auth-list__item"><a href="#">Войти</a></li>
+            <li class="auth-list__item auth-list__item--enter"><a href="#">Войти</a></li>
             <li class="auth-list__item"><a href="#">Регистрация</a></li>
           </ul>
         </div>
       </div>
-      <nav class="header__nav nav">
+      <nav class="header__nav nav container">
         <ul class="nav__list">
           <li class="nav__item"><a href="#">Главная</a></li>
           <li class="nav__item"><a href="#">Компания</a></li>
@@ -202,7 +204,7 @@
         <section class="main__promo promo">
           <h2 class="heading-two">Компания «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
+          <p class="promo__text">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
           <ul class="promo__list">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
@@ -222,7 +224,7 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__top footer-top">
+      <div class="footer__top footer-top container">
         <div class="footer-top__info">
           <a class="logo logo--footer">
             <img src="img/techomart_logo.svg" width="139" height="24" alt="Логотип интернет-магазина Техномарт">
@@ -249,20 +251,22 @@
         </div>
       </div>
       <div class="footer__bottom footer-bottom">
-        <p class="footer-bottom__copyright">© 2010–2019 Компания «Техномарт» Все права защищены</p>
-        <ul class="footer-bottom__social social">
-          <li class="social__item"><a class="social__link social__link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
-          <li class="social__item"><a class="social__link social__link--fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-          <li class="social__item"><a class="social__link social__link--insta" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
-        </ul>
-        <p class="footer-bottom__mail">
-          Обратная связь:
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="footer-bottom__dev">
-          Разработано —
-          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-        </p>
+        <div class="footer-bottom__wrapper container">
+          <p class="footer-bottom__copyright">© 2010–2019 Компания «Техномарт» Все права защищены</p>
+          <ul class="footer-bottom__social social">
+            <li class="social__item"><a class="social__link social__link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+            <li class="social__item"><a class="social__link social__link--fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li class="social__item"><a class="social__link social__link--insta" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+          </ul>
+          <p class="footer-bottom__mail">
+            Обратная связь:
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="footer-bottom__dev">
+            Разработано —
+            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+          </p>
+        </div>
       </div>
     </footer>
 
