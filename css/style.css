@@ -153,6 +153,13 @@ input[type="radio"].visually-hidden {
   background-color: #ba2732;
 }
 
+.button.disabled,
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: #000000;
+}
+
 /* Header */
 .header {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -1733,8 +1740,8 @@ input[type="radio"].visually-hidden {
 
 /* Modal */
 .modal {
-  /*position: fixed;*/
-  position: absolute;
+  display: none;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1743,6 +1750,10 @@ input[type="radio"].visually-hidden {
 
 .modal h2 {
   margin: 0;
+}
+
+.modal__open {
+  display: block;
 }
 
 .modal__close {
@@ -1761,8 +1772,6 @@ input[type="radio"].visually-hidden {
 
 /* Modal feedback */
 .modal__feedback {
-  /*display: none;*/
-  top: 25%;
   width: 620px;
   padding-top: 48px;
   background-color: #ffffff;
@@ -1842,8 +1851,6 @@ input[type="radio"].visually-hidden {
 
 /* Modal map */
 .modal__map {
-  /*display: none;*/
-  top: 80%;
   width: 940px;
   height: 446px;
   box-shadow: 0px 0px 15px 1px rgba(47,41,42,0.5);
@@ -1851,8 +1858,6 @@ input[type="radio"].visually-hidden {
 
 /* Modal cart */
 .modal__cart {
-  /*display: none;*/
-  top: 130%;
   width: 620px;
   padding-top: 48px;
   background-color: #ffffff;
