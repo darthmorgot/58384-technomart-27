@@ -319,14 +319,17 @@
       </div>
     </footer>
 
-    <section class="modal modal__cart">
-      <h2>Товар добавлен в корзину!</h2>
-      <div>
-        <a href="#">Оформить заказ</a>
-        <button type="button">Продолжить покупки</button>
+    <section class="modal modal__cart modal-cart">
+      <div class="modal-cart__message">
+        <h2>Товар добавлен в корзину!</h2>
       </div>
-      <button type="button">
+      <div class="modal-cart__buttons">
+        <a class="modal-cart__btn button button--red" href="#">Оформить заказ</a>
+        <button class="modal-cart__btn modal-cart__btn--white button" type="button">Продолжить покупки</button>
+      </div>
+      <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>
+        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
       </button>
     </section>
 
