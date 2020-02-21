@@ -160,6 +160,18 @@ input[type="radio"].visually-hidden {
   background-color: #000000;
 }
 
+.new::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 60px;
+  height: 59px;
+  background-image: url("../img/new_flag.png");
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
 /* Header */
 .header {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -565,10 +577,9 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 58px;
+  margin-top: 59px;
   margin-bottom: 53px;
   font-family: "Cuprum", "Arial", sans-serif;
-  background-color: #ccc;
 }
 
 .goods__item {
@@ -583,9 +594,15 @@ input[type="radio"].visually-hidden {
 }
 
 .goods__item--materials {
+  position: relative;
   background-color: #ffbf47;
   background-image: url("../img/icon-1.svg");
   background-position: 83% 55%;
+}
+
+.goods__item--materials::after {
+  top: 0;
+  right: 0;
 }
 
 .goods__item--tool {
@@ -607,6 +624,7 @@ input[type="radio"].visually-hidden {
 }
 
 .goods__item--delivery {
+  margin-bottom: 0;
   background-color: #ffc047;
   background-image: url("../img/icon-5.svg");
   background-position: 86% 54%;
@@ -627,8 +645,29 @@ input[type="radio"].visually-hidden {
 }
 
 /* Slider */
-.slider__item h3 {
+.slider {
+  position: relative;
+  width: 620px;
+}
+
+.slider__item {
+  position: absolute;
+  display: none;
+}
+
+.slider__item--active {
+  display: block;
+}
+
+.slider__heading {
+  position: absolute;
+  padding-top: 23px;
+  padding-left: 24px;
+}
+
+.slider__heading h3 {
   margin: 0;
+  margin-bottom: 2px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -636,12 +675,18 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
-.slider__item p {
+.slider__heading p {
   margin: 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   color: #ffffff;
+}
+
+.slider__btn {
+  position: absolute;
+  bottom: 22px;
+  left: 25px;
 }
 
 .slider__btn a {
@@ -652,6 +697,9 @@ input[type="radio"].visually-hidden {
 }
 
 .slider__arrows button {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
   width: 22px;
   height: 40px;
   border: none;
@@ -659,21 +707,53 @@ input[type="radio"].visually-hidden {
 }
 
 .slider__arrow-prev {
+  left: 25px;
   background: url("../img/icon-left.svg") no-repeat center center;
 }
 
 .slider__arrow-next {
+  right: 20px;
   background: url("../img/icon-right.svg") no-repeat center center;
 }
 
+.slider__dots {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 30px;
+  bottom: 36px;
+  left: 50%;
+  margin-left: -15px;
+}
+
 .slider__dots button {
+  display: block;
   width: 10px;
   height: 10px;
   padding: 0;
-  margin-right: 7px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider__dot {
+  position: relative;
+}
+
+.slider__dot::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  background-color: #ee3643;
+  border-radius: 50%;
+}
+
+.slider__dot--active::after {
+  display: block;
 }
 
 /* Popular */
@@ -1363,18 +1443,6 @@ input[type="radio"].visually-hidden {
   padding-bottom: 10px;
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
-}
-
-.product--new::after {
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  width: 60px;
-  height: 59px;
-  background-image: url("../img/new_flag.png");
-  background-repeat: no-repeat;
-  z-index: 10;
 }
 
 .product:hover,
