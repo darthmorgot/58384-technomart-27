@@ -127,7 +127,7 @@
               <del class="product__old-price">32500 Р.</del>
               <span class="product__price">25500 Р.</span>
               <div class="product__buttons">
-                <button class="product__btn product__btn--buy" type="button">Купить</button>
+                <button class="product__btn product__btn--buy" type="button" data-modal="modal__cart">Купить</button>
                 <button class="product__btn product__btn--bookmark" type="button">В закладки</button>
               </div>
             </li>
@@ -137,7 +137,7 @@
               <del class="product__old-price">22500 Р.</del>
               <span class="product__price">15500 Р.</span>
               <div class="product__buttons">
-                <button class="product__btn product__btn--buy" type="button">Купить</button>
+                <button class="product__btn product__btn--buy" type="button" data-modal="modal__cart">Купить</button>
                 <button class="product__btn product__btn--bookmark" type="button">В закладки</button>
               </div>
             </li>
@@ -147,7 +147,7 @@
               <del class="product__old-price">30500 Р.</del>
               <span class="product__price">25500 Р.</span>
               <div class="product__buttons">
-                <button class="product__btn product__btn--buy" type="button">Купить</button>
+                <button class="product__btn product__btn--buy" type="button" data-modal="modal__cart">Купить</button>
                 <button class="product__btn product__btn--bookmark" type="button">В закладки</button>
               </div>
             </li>
@@ -156,7 +156,7 @@
               <img src="img/perforator_4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <span class="product__price product__price--margin-top">12500 Р.</span>
               <div class="product__buttons">
-                <button class="product__btn product__btn--buy" type="button">Купить</button>
+                <button class="product__btn product__btn--buy" type="button" data-modal="modal__cart">Купить</button>
                 <button class="product__btn product__btn--bookmark" type="button">В закладки</button>
               </div>
             </li>
@@ -228,9 +228,9 @@
           <h2 class="heading-two">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <a class="contacts__map" href="#">
-            <img src="img/map_mini.png" width="300" height="158" alt="Карта">
+            <img src="img/map_mini.png" width="300" height="158" alt="Карта" data-modal="modal__map">
           </a>
-          <a class="contacts__btn button button--red" href="#">Заблудились? Напишите нам!</a>
+          <a class="contacts__btn button button--red" href="#" data-modal="modal__feedback">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -299,13 +299,13 @@
             <textarea class="feedback-form__message" name="message" id="message" placeholder="В свободной форме"></textarea>
           </p>
         </div>
+        <span class="feedback-form__error">Заполните поля "Ваше имя", "Вал e-mail"</span>
         <div class="feedback-form__submit">
           <button class="feedback-form__btn button button--red" type="submit">Отправить</button>
         </div>
       </form>
       <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>
-        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
       </button>
     </section>
 
@@ -314,7 +314,6 @@
       <img src="img/map_big.png" width="940" height="446" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
       <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>
-        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
       </button>
     </section>
 
@@ -328,10 +327,9 @@
       </div>
       <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>
-        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
       </button>
     </section>
 
-    <script src="js/script.js"></script>
+    <script src="js/popup.js"></script>
   </body>
 </html>
