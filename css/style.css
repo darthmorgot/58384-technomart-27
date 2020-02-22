@@ -1812,6 +1812,16 @@ input[type="radio"].visually-hidden {
   margin-right: 11px;
 }
 
+/* Animation */
+@keyframes test {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Modal */
 .modal {
   display: none;
@@ -1822,26 +1832,46 @@ input[type="radio"].visually-hidden {
   z-index: 20;
 }
 
+.modal--open {
+  display: block;
+  animation: test 0.5s;
+}
+
 .modal h2 {
   margin: 0;
 }
 
-.modal__open {
-  display: block;
-}
-
 .modal__close {
   position: absolute;
-  top: 9px;
-  right: 9px;
+  top: 18px;
+  right: 34px;
   padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.modal__close:hover path {
-  fill: #ca2c37;
+.modal__close::before,
+.modal__close::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 4px;
+  background-color: #ee3643;
+  border-radius: 2px;
+}
+
+.modal__close::before {
+  transform: rotate(45deg);
+}
+
+.modal__close::after {
+  transform: rotate(-45deg);
+}
+
+.modal__close:hover::before,
+.modal__close:hover::after {
+  background-color: #ca2c37;
 }
 
 /* Modal feedback */
@@ -1901,6 +1931,20 @@ input[type="radio"].visually-hidden {
   height: 114px;
   padding: 10px 16px;
   resize: none;
+}
+
+.feedback-form__error {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  font-size: 16px;
+  transform: translateX(-50%);
+  color: #ee3643;
+}
+
+.feedback-form__error--active {
+  display: block;
 }
 
 .feedback-form__submit {
