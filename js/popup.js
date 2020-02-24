@@ -16,7 +16,6 @@
     var error = form.querySelector('.feedback-form__error');
   }
 
-
   var isStorageSupport = true;
   var safeName = '';
   var safeMail = '';
@@ -29,9 +28,9 @@
   }
 
   function showModal(attr) {
-    for (var item of modal) {
-      if (item.classList.contains(attr)) {
-        item.classList.add('modal--open');
+    for (var i = 0; i < modal.length; i++) {
+      if (modal[i].classList.contains(attr)) {
+        modal[i].classList.add('modal--open');
 
         if (form) {
           if (safeName && safeMail) {
@@ -47,23 +46,23 @@
   };
 
   function closeModal() {
-    for (var item of modal) {
-      item.classList.remove('modal--open');
+    for (var i = 0; i < modal.length; i++) {
+      modal[i].classList.remove('modal--open');
       error.classList.remove('feedback-form__error--active');
     }
   };
 
   function btnCloseModal(btn) {
-    for (var item of btn) {
-      item.addEventListener('click', function(e) {
+    for (var i = 0; i < btn.length; i++) {
+      btn[i].addEventListener('click', function(e) {
         e.preventDefault();
         closeModal();
       });
     }
   }
 
-  for (var item  of dataModal) {
-    item.addEventListener('click', function(e) {
+  for (var i = 0; i < dataModal.length; i++) {
+    dataModal[i].addEventListener('click', function(e) {
       e.preventDefault();
       var attr = e.target.getAttribute('data-modal');
       showModal(attr);
@@ -91,8 +90,8 @@
 
   window.addEventListener('keydown', function(e) {
     if (e.keyCode === 27) {
-      for (var item of modal) {
-        if (item.classList.contains('modal--open')) {
+      for (var i = 0; i < modal.length; i++) {
+        if (modal[i].classList.contains('modal--open')) {
           e.preventDefault();
           closeModal();
         }
@@ -101,4 +100,3 @@
   });
 
 })();
-
