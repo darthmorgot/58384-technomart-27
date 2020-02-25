@@ -48,7 +48,9 @@
   function closeModal() {
     for (var i = 0; i < modal.length; i++) {
       modal[i].classList.remove('modal--open');
-      error.classList.remove('feedback-form__error--active');
+      if (error) {
+        error.classList.remove('feedback-form__error--active');
+      }
     }
   };
 
@@ -73,8 +75,6 @@
     form.addEventListener('submit', function(e) {
       if (!name.value || !mail.value) {
         e.preventDefault();
-        error.classList.remove('feedback-form__error--active');
-        modal.offsetWidth = modal.offsetWidth;
         error.classList.add('feedback-form__error--active');
       } else {
         if (isStorageSupport) {
