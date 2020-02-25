@@ -1461,11 +1461,6 @@ input[type="radio"].visually-hidden {
   border: 1px solid #e5e5e5;
 }
 
-.product--focus {
-  box-shadow: 0px 10px 25px 0px rgba(41,51,73,0.5);
-  border-color: #ffffff;
-}
-
 .product:hover {
   box-shadow: 0px 10px 25px 0px rgba(41,51,73,0.5);
   border-color: #ffffff;
@@ -1543,10 +1538,6 @@ input[type="radio"].visually-hidden {
   padding: 44px 42px;
   background-color: #ffffff;
   z-index: -1;
-}
-
-.product__buttons--focus {
-  z-index: 1;
 }
 
 .product:hover .product__buttons {
