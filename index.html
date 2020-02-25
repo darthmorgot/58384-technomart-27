@@ -97,8 +97,8 @@
               <a class="button button--red" href="catalog.html">Открыть каталог</a>
             </div>
             <div class="slider__arrows">
-              <button class="slider__arrow-prev" type="button"><span class="visually-hidden">Назад</span></button>
-              <button class="slider__arrow-next" type="button"><span class="visually-hidden">Вперед</span></button>
+              <button class="slider__arrow slider__arrow-prev" type="button"><span class="visually-hidden">Назад</span></button>
+              <button class="slider__arrow slider__arrow-next" type="button"><span class="visually-hidden">Вперед</span></button>
             </div>
             <div class="slider__dots">
               <button class="slider__dot" type="button"><span class="visually-hidden">Слайд 1</span></button>
@@ -199,9 +199,9 @@
           </div>
           <div class="services__tabs tabs">
             <div class="tabs__panel">
-              <button class="tabs__switch tabs__switch--active" type="button">Доставка</button>
-              <button class="tabs__switch" type="button">Гарантия</button>
-              <button class="tabs__switch" type="button">Кредит</button>
+              <button class="tabs__switch tabs__switch--active" type="button" data-tab="tabs__item--delivery">Доставка</button>
+              <button class="tabs__switch" type="button" data-tab="tabs__item--warranty">Гарантия</button>
+              <button class="tabs__switch" type="button" data-tab="tabs__item--credit">Кредит</button>
             </div>
             <div class="tabs__wrapper">
               <div class="tabs__item tabs__item--delivery tabs__item--active">
@@ -342,6 +342,7 @@
     </section>
 
     <script src="js/popup.js"></script>
-    <script src="js/focus.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/tabs.js"></script>
   </body>
 </html>
