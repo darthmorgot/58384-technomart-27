@@ -2,7 +2,6 @@
   'use strict';
 
   var tabs = document.querySelector('.tabs__wrapper');
-
   var tabButtons = document.querySelector('.tabs__panel');
 
   function tabSwitch(attr) {
@@ -15,6 +14,7 @@
   }
 
   tabButtons.addEventListener('click', function(e) {
+    e.preventDefault();
     var attr = e.target.getAttribute('data-tab');
 
     if (e.target.classList.contains('tabs__switch--active')) return;
@@ -28,4 +28,3 @@
   });
 
 })();
-
