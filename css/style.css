@@ -701,15 +701,15 @@ input[type="radio"].visually-hidden {
 
 .slider__btn {
   position: absolute;
-  bottom: 22px;
+  bottom: 27px;
   left: 25px;
 }
 
 .slider__btn a {
   display: block;
   width: 195px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 9px;
 }
 
 .slider__arrows button {
@@ -736,7 +736,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  width: 30px;
   bottom: 36px;
   left: 50%;
   margin-left: -15px;
@@ -746,10 +745,15 @@ input[type="radio"].visually-hidden {
   display: block;
   width: 10px;
   height: 10px;
+  margin-right: 10px;
   padding: 0;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider__dots button:last-child {
+  margin-right: 0;
 }
 
 .slider__dot {
@@ -859,7 +863,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services__info {
-  width: 398px;
+  width: 400px;
   margin: 0;
   font-size: 13px;
   line-height: 24px;
@@ -874,6 +878,7 @@ input[type="radio"].visually-hidden {
 .tabs__panel {
   width: 240px;
   padding-top: 46px;
+  padding-bottom: 65px;
 }
 
 .tabs__switch {
@@ -970,7 +975,7 @@ input[type="radio"].visually-hidden {
 .main__info {
   display: flex;
   justify-content: space-between;
-  padding-top: 79px;
+  padding-top: 80px;
   padding-bottom: 86px;
 }
 
@@ -1025,8 +1030,8 @@ input[type="radio"].visually-hidden {
 .promo__btn {
   display: block;
   width: 220px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 9px;
 }
 
 /* Contacts */
@@ -1053,8 +1058,8 @@ input[type="radio"].visually-hidden {
 .contacts__btn {
   display: block;
   width: 300px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 9px;
 }
 
 /* Catalog */
@@ -1675,7 +1680,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-top__info {
-  width: 325px;
+  width: 330px;
 }
 
 .logo--footer {
