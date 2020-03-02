@@ -14,6 +14,7 @@
     var mail = form.querySelector('[name=email]');
     var message = form.querySelector('[name=message]');
     var error = form.querySelector('.feedback-form__error');
+    var formWidth = 0;
   }
 
   var isStorageSupport = true;
@@ -48,10 +49,9 @@
   function closeModal() {
     for (var i = 0; i < modal.length; i++) {
       modal[i].classList.remove('modal--open');
-      if (error) {
-        error.classList.remove('feedback-form__error--active');
-      }
     }
+    error.classList.remove('feedback-form__error--active');
+    addRemoveClass('remove');
   };
 
   function btnCloseModal(btn) {
@@ -60,6 +60,17 @@
         e.preventDefault();
         closeModal();
       });
+    }
+  }
+
+  function addRemoveClass(act) {
+    if (act == 'add') {
+      name.classList.add('feedback-form__input--error');
+      mail.classList.add('feedback-form__input--error');
+    }
+    if (act == 'remove') {
+      name.classList.remove('feedback-form__input--error');
+      mail.classList.remove('feedback-form__input--error');
     }
   }
 
@@ -76,6 +87,9 @@
       if (!name.value || !mail.value) {
         e.preventDefault();
         error.classList.add('feedback-form__error--active');
+        addRemoveClass('remove');
+        formWidth = form.offsetWidth;
+        addRemoveClass('add');
       } else {
         if (isStorageSupport) {
           localStorage.setItem('name', name.value);

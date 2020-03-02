@@ -13,7 +13,10 @@
         count = i;
       }
       slides[i].classList.remove('slider__item--active');
-      dots[i].classList.remove('slider__dot--active');
+
+      if (dots[i]) {
+        dots[i].classList.remove('slider__dot--active');
+      }
     }
 
     if (elem) {
@@ -37,7 +40,6 @@
       slides[index].classList.add('slider__item--active');
       dots[index].classList.add('slider__dot--active');
     }
-
   }
 
   arrows.addEventListener('click', function(e) {
@@ -54,9 +56,7 @@
       var index = this.className.slice(-1);
 
       slideSwitch(null, index);
-
     });
   }
 
 })();
-
