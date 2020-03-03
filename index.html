@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize-min.css">
     <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="header__main header-main container">
-        <p class="header-main__desc">Интернет-магазин строительных материалов<br> и инструментов для ремонта</p>
+        <p class="header-main__desc">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
         <div class="header-main__contacts">
           <a class="header-main__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <address class="header-main__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
@@ -127,9 +127,7 @@
           </div>
           <ul class="popular__list">
             <li class="popular__item product">
-              <div class="product__heading">
-                <h3 class="product__title"><a href="#">Перфоратор BOSCH BFG 9000</a></h3>
-              </div>
+              <h3 class="product__title"><a href="#">Перфоратор BOSCH BFG 9000</a></h3>
               <img src="img/perforator_1.jpg" width="218" height="170" alt="Карточка товара Перфоратор BOSCH BFG 9000">
               <del class="product__old-price">32500 Р.</del>
               <span class="product__price">25500 Р.</span>
@@ -139,9 +137,7 @@
               </div>
             </li>
             <li class="popular__item product">
-              <div class="product__heading">
-                <h3 class="product__title"><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
-              </div>
+              <h3 class="product__title"><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
               <img src="img/perforator_2.jpg" width="218" height="170" alt="Карточка товара Перфоратор BOSCH BFG 3000">
               <del class="product__old-price">22500 Р.</del>
               <span class="product__price">15500 Р.</span>
@@ -151,9 +147,7 @@
               </div>
             </li>
             <li class="popular__item product">
-              <div class="product__heading">
-                <h3 class="product__title"><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
-              </div>
+              <h3 class="product__title"><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
               <img src="img/perforator_3.jpg" width="218" height="170" alt="Карточка товара Перфоратор BOSCH BFG 6000">
               <del class="product__old-price">30500 Р.</del>
               <span class="product__price">25500 Р.</span>
@@ -163,9 +157,7 @@
               </div>
             </li>
             <li class="popular__item product new">
-              <div class="product__heading">
-                <h3 class="product__title"><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
-              </div>
+              <h3 class="product__title"><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
               <img src="img/perforator_4.jpg" width="218" height="170" alt="Карточка товара Перфоратор BOSCH BFG 2000">
               <span class="product__price product__price--margin-top">12500 Р.</span>
               <div class="product__buttons">
@@ -240,7 +232,7 @@
         <section class="main__contacts contacts">
           <h2 class="heading-two">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a class="contacts__map" href="#">
+          <a class="contacts__map" href="contacts.html">
             <img src="img/map_mini.png" width="300" height="158" alt="Карта Офис компании по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" data-modal="modal__map">
           </a>
           <a class="contacts__btn button button--red" href="contacts.html" data-modal="modal__feedback">Заблудились? Напишите нам!</a>
@@ -256,7 +248,7 @@
           </a>
           <address class="footer-top__contacts">
             <p class="footer-top__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-            <p class="footer-top__phone">+7 (812) 555-05-55</p>
+            <a class="footer-top__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           </address>
         </div>
         <div class="footer-top__nav footer-nav">
