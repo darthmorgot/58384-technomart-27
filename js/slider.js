@@ -42,10 +42,12 @@
     }
   }
 
-  arrows.addEventListener('click', function(e) {
-    e.preventDefault();
-    slideSwitch(e.target, null);
-  });
+  if (arrows) {
+    arrows.addEventListener('click', function(e) {
+      e.preventDefault();
+      slideSwitch(e.target, null);
+    });
+  }
 
   for (var i = 0; i < dots.length; i++) {
     dots[i].classList.add('num_' + i);

@@ -13,18 +13,20 @@
     }
   }
 
-  tabButtons.addEventListener('click', function(e) {
-    e.preventDefault();
-    var attr = e.target.getAttribute('data-tab');
+  if (tabButtons) {
+    tabButtons.addEventListener('click', function(e) {
+      e.preventDefault();
+      var attr = e.target.getAttribute('data-tab');
 
-    if (e.target.classList.contains('tabs__switch--active')) return;
+      if (e.target.classList.contains('tabs__switch--active')) return;
 
-    for (var i = 0; i < tabButtons.children.length; i++) {
-      tabButtons.children[i].classList.remove('tabs__switch--active');
-    }
+      for (var i = 0; i < tabButtons.children.length; i++) {
+        tabButtons.children[i].classList.remove('tabs__switch--active');
+      }
 
-    e.target.classList.add('tabs__switch--active');
-    tabSwitch(attr);
-  });
+      e.target.classList.add('tabs__switch--active');
+      tabSwitch(attr);
+    });
+  }
 
 })();

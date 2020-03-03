@@ -46,12 +46,27 @@
     }
   };
 
-  function closeModal() {
+  function removeClass() {
     for (var i = 0; i < modal.length; i++) {
       modal[i].classList.remove('modal--open');
+      modal[i].classList.remove('modal--close');
     }
-    error.classList.remove('feedback-form__error--active');
-    addRemoveClass('remove');
+  }
+
+  function closeModal() {
+    for (var i = 0; i < modal.length; i++) {
+      if (modal[i].classList.contains('modal--open')) {
+        modal[i].classList.add('modal--close');
+        setTimeout(function() {
+          removeClass();
+        }, 500);
+      }
+    }
+
+    if (form) {
+      error.classList.remove('feedback-form__error--active');
+      actionClass('remove');
+    }
   };
 
   function btnCloseModal(btn) {
@@ -63,7 +78,7 @@
     }
   }
 
-  function addRemoveClass(act) {
+  function actionClass(act) {
     if (act == 'add') {
       name.classList.add('feedback-form__input--error');
       mail.classList.add('feedback-form__input--error');
@@ -87,9 +102,9 @@
       if (!name.value || !mail.value) {
         e.preventDefault();
         error.classList.add('feedback-form__error--active');
-        addRemoveClass('remove');
+        actionClass('remove');
         formWidth = form.offsetWidth;
-        addRemoveClass('add');
+        actionClass('add');
       } else {
         if (isStorageSupport) {
           localStorage.setItem('name', name.value);
