@@ -1752,6 +1752,7 @@ input[type="radio"].visually-hidden {
 
 .product__btn--buy:active {
   background-color: #518534;
+  border-bottom-color: #518534;
 }
 
 .product__btn--bookmark {
