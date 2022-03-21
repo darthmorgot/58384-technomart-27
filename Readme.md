@@ -1,6 +1,6 @@
 # Личный проект «Техномарт»
 
-* Студент: [Владимир Чукавин](https://up.htmlacademy.ru/htmlcss/27/user/58384).
+* Студент: [](https://up.htmlacademy.ru/htmlcss/27/user/58384).
 * Наставник: [Дмитрий Иовлев](https://htmlacademy.ru/profile/id200490).
 
 ---
